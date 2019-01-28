@@ -322,6 +322,29 @@ input, select, textarea {
 		border-bottom-color: #eeeeee;
 	}
 
+	.row3 {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column3 {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column3 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+/* Create two equal columns that sits next to each other */
+
 /* Row */
 
 	.row {
@@ -2578,11 +2601,11 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 20%;
 		}
 
 			.image.left img, .image.right img {
-				width: 100%;
+				width: 20%;
 			}
 
 		.image.left {
@@ -2598,6 +2621,7 @@ input, select, textarea {
 		}
 
 		.image.fit {
+			
 			display: block;
 			margin: 2.5rem 0;
 			width: 100%;
