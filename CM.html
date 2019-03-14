@@ -43,13 +43,13 @@
 				<!-- Header -->
 					<header id="header">
 
-						<a href="main.html" class="logo">Manthan</a>
+						<a href="index.html" class="logo">Manthan</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="main.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li><a href="ps.html">Prospective Students</a></li>
 							<li><a href="students.html">Desi vols</a></li>
 							<li class="active"><a href="CM.html">Committee Members</a></li>
@@ -73,13 +73,16 @@
 								<h2><a>Committee Members</a></h2>
 
 							</header>
+							<header class="post featured">
+								
+							</header>
 						</article>
 
 					<section id="one" class="tiles">
 								<div class="inner">
 									<div class="tab">
 										<center>
-		  									<button class="tablinks" onclick="openCity(event, '1819')" id="defaultOpen">Current</button>
+											<button class="tablinks" onclick="openCity(event, '1819')">Current</button>
 		  									<button class="tablinks" onclick="openCity(event, '1718')">2017-2018</button>
 		  									<button class="tablinks" onclick="openCity(event, '1617')">2016-2017</button>
 										  	<button class="tablinks" onclick="openCity(event, '1516')">2015-2016</button>
@@ -1190,6 +1193,83 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+			<script src="vendor/bootstrap/js/popper.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+			<script src="vendor/select2/select2.min.js"></script>
+			<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+			<script>
+				$('.js-pscroll').each(function(){
+					var ps = new PerfectScrollbar(this);
+					$(window).on('resize', function(){
+						ps.update();
+					})
+					$(this).on('ps-x-reach-start', function(){
+						$(this).parent().find('.table100-firstcol').removeClass('shadow-table100-firstcol');
+					});
+					$(this).on('ps-scroll-x', function(){
+						$(this).parent().find('.table100-firstcol').addClass('shadow-table100-firstcol');
+					});
+
+				});
+				<script>
+				// Get the elements with class="column"
+					var elements = document.getElementsByClassName("column3");
+					// Declare a loop variable
+					var i;
+					// Full-width images
+					function one() {
+					    for (i = 0; i < elements2.length; i++) {
+					    elements[i].style.msFlex = "50%";  // IE10
+					    elements[i].style.flex = "50%";
+					  }
+					}
+					// Two images side by side
+					// Four images side by side
+					function four() {
+					  for (i = 0; i < elements.length; i++) {
+					    elements[i].style.msFlex = "25%";  // IE10
+					    elements[i].style.flex = "25%";
+					  }
+					}
+					// Add active class to the current button (highlight it)
+					var header = document.getElementById("myHeader");
+					var btns = header.getElementsByClassName("btn");
+					for (var i = 0; i < btns.length; i++) {
+					  btns[i].addEventListener("click", function() {
+					    var current = document.getElementsByClassName("active");
+					    current[0].className = current[0].className.replace(" active", "");
+					    this.className += " active";
+					  });
+					}
+				</script>		
+			</script>
+			<script src="js/main.js"></script>
+			<script>
+				function openCity(evt, cityName) {
+    				var i, tabcontent, tablinks;
+    				tabcontent = document.getElementsByClassName("tabcontent");
+    				for (i = 0; i < tabcontent.length; i++) {
+        				tabcontent[i].style.display = "none";
+    				}
+    				tablinks = document.getElementsByClassName("tablinks");
+    				for (i = 0; i < tablinks.length; i++) {
+        				tablinks[i].className = tablinks[i].className.replace(" active", "");
+    				}
+    				document.getElementById(cityName).style.display = "block";
+    				evt.currentTarget.className += " active";
+				}
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
+			<script type="text/javascript">
+				document.getElementById("1718").style.display = 'none';
+				document.getElementById("1617").style.display = 'none';
+				document.getElementById("1516").style.display = 'none';
+				document.getElementById("1415").style.display = 'none';
+				document.getElementById("1314").style.display = 'none';
+				document.getElementById("1213").style.display = 'none';
+			</script>
 	</body>
 
 </html>
